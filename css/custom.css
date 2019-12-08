@@ -9,3 +9,17 @@
 option{
   column-count: 2;
 }
+
+.order ul {
+  list-style: none;
+}
+
+.order ul li:before {
+  content: '✓';
+}
+.carousel-inner{
+  height:1000px;
+}
+.carousel-item , .carousel-item.active{
+  height:100%;
+}

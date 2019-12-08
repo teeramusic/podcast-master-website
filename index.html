@@ -42,7 +42,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#quote">Plans</a>
+            <a class="nav-link js-scroll-trigger" href="#quote">Get a Quote</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#why">Why Us?</a>
@@ -73,272 +73,374 @@
     </div>
   </header>
 
-  <section class="plans bg-primary" id="quote">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 mx-auto">
-          <h2 class="section-heading mb-4">Get an instant quote!</h2>
-        </div>
-      </div>
-      <form id="quote-form">
-        <div class="form-group row">
-          <label for="form-name" class="col-md-2">Name</label>
-          <div class="col-md-10">
-            <input type="text" class="form-control" id="form-name" placeholder="Jane Doe">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="from-email" class="col-md-2">Email address</label>
-          <div class="col-md-10">
-            <input type="email" class="form-control" id="form-email" placeholder="name@example.com">
-          </div>
-        </div>
-        <fieldset class="form-group">
-          <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">I need</legend>
-            <div class="col-sm-10">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="edit-master" id="form-edit-master" value="edit and master">
-                <label class="form-check-label" for="form-edit-master">
-                  Editing and mastering
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="edit-master" id="form-edit-only" value="edit only" checked>
-                <label class="form-check-label" for="form-edit-only">
-                  Only editing
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="edit-master" id="form-master-only" value="master only">
-                <label class="form-check-label" for="form-master-only">
-                  Only mastering
-                </label>
-              </div>
-            </div>
-          </div>
-        </fieldset>
-        <div class="form-group">
-          <label for="form-raw-length">Total length of your raw audio in minutes:</label>
-          <select class="form-control" id="form-raw-length">
-            <option>I'm not sure</option>
-            <option selected>10</option>
-            <option>20</option>
-            <option>30</option>
-            <option>40</option>
-            <option>50</option>
-            <option>60</option>
-            <option>70</option>
-            <option>80</option>
-            <option>90</option>
-            <option>100</option>
-            <option>110</option>
-            <option>120</option>
-            <option>130</option>
-            <option>140</option>
-            <option>150</option>
-            <option>160</option>
-            <option>170</option>
-            <option>180</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="form-track-count">Total number of tracks of dialogue:</label>
-          <select class="form-control" id="form-track-count">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-          </select>
-        </div>
-        <fieldset class="form-group">
-          <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">Background Music</legend>
-            <div class="col-sm-10">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="bgmusic" id="option-no-music" value="no bgmusic" checked>
-                <label class="form-check-label" for="form-edit-master">
-                  My podcast has no background music
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="bgmusic" id="option-music-provided" value="bg music provided">
-                <label class="form-check-label" for="form-edit-only">
-                  I will provide the background music that I want for my podcast
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="bgmusic" id="option-need-music" value="need bg music">
-                <label class="form-check-label" for="form-master-only">
-                  I need appropriate background music added to my podcast
-                </label>
-              </div>
-            </div>
-          </div>
-        </fieldset>
-        <div class="form-group collapse" id="bg-music-collapse">
-          <label for="form-bg-music-count">Number of background music you need / have:</label>
-          <select class="form-control" id="form-bg-music-count">
-            <option>None</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-          </select>
-        </div>
-        <fieldset class="form-group">
-          <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">Sound effects</legend>
-            <div class="col-sm-10">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="sfx" id="option-no-sfx" value="no sfx" checked>
-                <label class="form-check-label" for="form-edit-master">
-                  My podcast has no sound effects
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="sfx" id="option-sfx-provided" value="sfx provided">
-                <label class="form-check-label" for="form-edit-only">
-                  I will provide the sound effects that I want for my podcast
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="sfx" id="option-need-sfx" value="need sfx">
-                <label class="form-check-label" for="form-master-only">
-                  I need appropriate sound effects added to my podcast
-                </label>
-              </div>
-            </div>
-          </div>
-        </fieldset>
-        <div class="form-group collapse" id="sfx-collapse">
-          <label for="form-bg-music-count">Number of sfx music you need / have:</label>
-          <select class="form-control" id="form-bg-music-count">
+  <!-- start quote -->
+  <div class="custom-cart">
 
-            <option>None</option>
-            <option>less than 10</option>
-            <option>11 - 20</option>
-            <option>21 - 30</option>
-            <option>31 - 40</option>
-            <option>41 - 50</option>
-            <option>51 - 60</option>
-            <option>61 - 70</option>
-            <option>71 - 80</option>
-            <option>81 - 90</option>
-            <option>91 - 100</option>
-            <option>101+</option>
-          </select>
+
+    <div class="custom-cart-inner">
+
+
+      <section class="quote bg-primary show" id="quote">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 mx-auto">
+              <h2 class="section-heading mb-4">Get an instant quote!</h2>
+            </div>
+          </div>
+          <form id="quote-form">
+            <div class="form-group row">
+              <label for="form-name" class="col-md-2">Name</label>
+              <div class="col-md-10">
+                <input type="text" class="form-control" id="form-name" placeholder="Jane Doe">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="form-email" class="col-md-2">Email address</label>
+              <div class="col-md-10">
+                <input type="email" class="form-control" id="form-email" placeholder="name@example.com">
+              </div>
+            </div>
+            <fieldset class="form-group">
+              <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">I need</legend>
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="edit-master" id="form-edit-master" value="edit and master">
+                    <label class="form-check-label" for="form-edit-master">
+                      Editing and mastering
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="edit-master" id="form-edit-only" value="edit only" checked>
+                    <label class="form-check-label" for="form-edit-only">
+                      Only editing
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="edit-master" id="form-master-only" value="master only">
+                    <label class="form-check-label" for="form-master-only">
+                      Only mastering
+                    </label>
+                  </div>
+                  <!-- <div class="form-check">
+                <input class="form-check-input" type="radio" name="edit-master" id="form-top-tail" value="master only">
+                <label class="form-check-label" for="form-master-only">
+                  Only mastering + add intro / outro
+                </label>
+              </div> -->
+                </div>
+              </div>
+            </fieldset>
+            <div class="form-group">
+              <label for="form-raw-length">Total length of your raw audio in minutes:</label>
+              <select class="form-control" id="form-raw-length">
+                <option>I'm not sure</option>
+                <option selected>10</option>
+                <option>20</option>
+                <option>30</option>
+                <option>40</option>
+                <option>50</option>
+                <option>60</option>
+                <option>70</option>
+                <option>80</option>
+                <option>90</option>
+                <option>100</option>
+                <option>110</option>
+                <option>120</option>
+                <option>130</option>
+                <option>140</option>
+                <option>150</option>
+                <option>160</option>
+                <option>170</option>
+                <option>180</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="form-track-count">Total number of tracks of dialogue:</label>
+              <select class="form-control" id="form-track-count">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+            </div>
+            <fieldset class="form-group">
+              <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Background Music</legend>
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="bgmusic" id="option-no-music" value="no bgmusic" checked>
+                    <label class="form-check-label" for="option-no-music">
+                      My podcast has no background music
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="bgmusic" id="option-music-provided" value="bg music provided">
+                    <label class="form-check-label" for="option-music-provided">
+                      I will provide the background music that I want for my podcast
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="bgmusic" id="option-need-music" value="need bg music">
+                    <label class="form-check-label" for="option-need-music">
+                      I need appropriate background music added to my podcast
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <div class="form-group" id="bg-music-collapse">
+              <label for="form-bg-music-count">Number of background music you need / have:</label>
+              <select class="form-control" id="form-bg-music-count">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+            </div>
+            <fieldset class="form-group">
+              <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Sound effects</legend>
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sfx" id="option-no-sfx" value="no sfx" checked>
+                    <label class="form-check-label" for="option-no-sfx">
+                      My podcast has no sound effects
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sfx" id="option-sfx-provided" value="sfx provided">
+                    <label class="form-check-label" for="option-sfx-provided">
+                      I will provide the sound effects that I want for my podcast
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sfx" id="option-need-sfx" value="need sfx">
+                    <label class="form-check-label" for="option-need-sfx">
+                      I need appropriate sound effects added to my podcast
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <div class="form-group collapse" id="sfx-collapse">
+              <label for="form-bg-music-count">Number of sfx music you need / have:</label>
+              <select class="form-control" id="form-sfx-count">
+                <option value="10">less than 10</option>
+                <option value="20">11 - 20</option>
+                <option value="30">21 - 30</option>
+                <option value="40">31 - 40</option>
+                <option value="50">41 - 50</option>
+                <option value="60">51 - 60</option>
+                <option value="70">61 - 70</option>
+                <option value="80">71 - 80</option>
+                <option value="90">81 - 90</option>
+                <option value="100">91 - 100</option>
+                <option value="200">101 - 200</option>
+                <option value="300">201 - 300</option>
+                <option value="400">301 - 400</option>
+                <option value="500">401 - 500</option>
+                <option value="600">501 - 600</option>
+              </select>
+            </div>
+            <!-- <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Intro / Outro</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="intro" id="option-no-intro" value="no intro" checked>
+                <label class="form-check-label" for="form-edit-master">
+                  My podcast has no intro / outro
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="intro" id="option-intro-provided" value="intro provided">
+                <label class="form-check-label" for="form-edit-only">
+                  I will provide the intro / outro for my podcast
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="intro" id="option-need-intro" value="need intro">
+                <label class="form-check-label" for="form-master-only">
+                  I want an intro / outro made for my podcast
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset> -->
+            <!-- <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">AD breaks</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="adbreak" id="option-no-adbreak" value="no adbreak" checked>
+                <label class="form-check-label" for="form-edit-master">
+                  I don't have ad breaks
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="adbreak" id="option-adbreak" value="adbreak">
+                <label class="form-check-label" for="form-edit-only">
+                  I have ad breaks
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset> -->
+            <h2 class="strong collapse show" id="has-quote">YOUR QUOTE IS: <span class="price-total">49.00USD</span></h2>
+            <h2 class="collapse" id="custom-quote">Please submit your files so we can get back to you.</h2>
+            <a href="#quote" role="button" class="btn btn-primary mb-2" data-toggle="collapse">MAKE AN ORDER</a>
+          </form>
         </div>
-        <h2 class="strong" id="has_quote">YOUR QUOTE IS: <span id="total">49</span>.00<small>USD</small></h2>
-        <h2 class="d-none">Please submit your files so we can get back to you</h2>
-      </form>
-      <br />
-      <hr />
-      <br /><br />
+      </section>
+      <!-- end quote -->
+
       <!-- FORM PAGE 2 START -->
-      <div class="">
+      <section class="order bg-primary" id="order">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="section-heading">
+                <h2>Your current order:</h2>
 
-        <div class="section-heading">
-
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <h3 class="strong">Editing</h3>
-            <ul>
-              <li>
-
-              </li>
-              <li>
-
-              </li>
-              <li>
-
-              </li>
-              <li>
-
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
-          <div class="col-md-4">
-            <h3 class="strong">Mastering</h3>
-            <ul>
-              <li>
-                EQ
-              </li>
-              <li>
-                Compression
-              </li>
-              <li>
-                Loudness Normalization: -16 LUFS
-              </li>
-              <li>
-
-              </li>
-            </ul>
+          <div class="row">
+            <div class="col-md-4">
+              <h3 class="strong">Editing</h3>
+              <span class="d-none" id="no-edit">
+                NO EDITING SELECTED
+              </span>
+              <ul id="has-edit">
+                <li>
+                  Editing for <span id="content-length"></span> minutes of content
+                </li>
+                <li>
+                  Editing for <span id="track-count"></span> tracks
+                </li>
+                <li>
+                  Remove dead air
+                </li>
+                <li>
+                  Remove mistakes
+                </li>
+                <li>
+                  Remove repeats
+                </li>
+                <li>
+                  Remove umms ahhs
+                </li>
+                <li>
+                  Remove hesitation
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3 class="strong">Mastering</h3>
+              <span id="has-mastering" class="d-none">NO MASTERING SELECTED</span>
+              <ul>
+                <li>
+                  Mastering for <span id="content-length"></span> minutes of content
+                </li>
+                <li>
+                  Mastering for <span id="track-count"></span> tracks
+                </li>
+                <li>
+                  Loudness leveling
+                </li>
+                <li>
+                  Noise attenuation
+                </li>
+                <li>
+                  Echo / reverb attenuation
+                </li>
+                <li>
+                  Plosive attenuation
+                </li>
+                <li>
+                  Remove harsh siblances
+                </li>
+                <li>
+                  EQ
+                </li>
+                <li>
+                  Compression
+                </li>
+                <li>
+                  Loudness Normalization: -16 LUFS
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3 class="strong">Extras</h3>
+              <span id="has-extras" class="d-none">NO EXTRAS SELECTED</span>
+              <ul>
+                <li id="has-bg-music">
+                  Mix in <span id="bg-music-count"></span> background music tracks
+                </li>
+                <li id="has-ad">
+                  Add <span id="ads"></span> AD breaks
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="col-md-4">
-            <h3 class="strong">Extras</h3>
-            <ul>
-              <li>
-
-              </li>
-              <li>
-
-              </li>
-              <li>
-
-              </li>
-              <li>
-
-              </li>
-            </ul>
-          </div>
-        </div>
-        <form action="/file-upload" class="dropzone mb-4">
-          <div class="fallback">
-            <input name="file" type="file" multiple />
-          </div>
-        </form>
-        <div class="row mb-4">
-          <div class="col">
+          <form action="/file-upload" class="dropzone mb-4">
+            <div class="fallback">
+              <input name="file" type="file" multiple />
+            </div>
+          </form>
+          <div class="row mb-4">
+            <div class="col">
               <h3>
                 What's included:
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
               <h3>
                 What's not included:
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
               <small>
-                <strong>Terms of Service:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <strong>Terms of Service:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est
+                laborum.
               </small>
+            </div>
           </div>
+          <p>
+            Cost total: <span class="price-total">49.00</span>USD
+          </p>
+          <button type="submit" class="btn btn-primary mb-2">ORDER</button>
+          <a href="#order" role="button" class="btn btn-secondary mb-2" data-toggle="collapse">MODIFY MY ORDER</a>
         </div>
-        <button type="submit" class="btn btn-primary mb-2">ORDER</button>
-        <button type="submit" class="btn btn-secondary mb-2 muted">MODIFY MY ORDER</button>
-      </div>
-      <!-- FORM PAGE 2 END -->
-
-
-
+      </section>
     </div>
-  </section>
+  </div>
+  <!-- FORM PAGE 2 END -->
+
+
 
   <section class="features" id="features">
     <div class="container">
