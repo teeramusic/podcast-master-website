@@ -1,9 +1,14 @@
 $fq = $("#quote-form");
 $pt = $(".price-total");
-$('#quote').on('hidden.bs.collapse', function () {
-  $("#order").collapse("show");
-  console.log("fire")
-})
+$cn = $("#cart-carousel");
+
+$cn.on("slide.bs.carousel",function(){
+  $('html,body').animate({
+    scrollTop: $cn.offset().top
+  }, 800);
+  console.log('slide');
+});
+
 $fq.change(function() {
   // toggle form collapse
   if ($fq.find("#option-no-music:checked").length) {
@@ -114,25 +119,17 @@ $fq.change(function() {
 
 });
 
-$fq.submit(function(e) {
-  e.preventDefault();
-  $("#quote>div.container").collapse("hide");
-});
-
-function showCart(data) {
-  // unknown raw audio length
-  if (!data) {
-
-    return;
-  }
-  // known raw audio length
-
-
-}
-
-
-
-function hideCart() {
-
-}
 $('.carousel').carousel('pause');
+// Dynamic URL change (AUDIO PLAYER)
+list.onclick = function(e) {
+e.preventDefault();
+
+var elm = e.target;
+var audio = document.getElementById('audio');
+
+var source = document.getElementById('audio');
+source.src = elm.getAttribute('data-value');
+
+audio.load(); //call this to just preload the audio without playing
+audio.play(); //call this to play the song right away
+};

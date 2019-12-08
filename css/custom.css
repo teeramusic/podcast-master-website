@@ -1,12 +1,13 @@
-.dropzone{
+.dropzone {
   border: none;
   border-radius: 0.5em;
 }
 
-.transition{
+.transition {
   transition: all ease 1s;
 }
-option{
+
+option {
   column-count: 2;
 }
 
@@ -17,9 +18,247 @@ option{
 .order ul li:before {
   content: '✓';
 }
-.carousel-inner{
-  height:1000px;
+
+.carousel-inner section {
+  height: 1000px;
 }
-.carousel-item , .carousel-item.active{
-  height:100%;
+
+.player-wrapper {
+  height: 100%;
+  /* overflow: scroll; */
 }
+
+div.mejs__player {
+  position: absolute;
+  bottom: 0;
+}
+
+.mejs__volume-button, .mejs__horizontal-volume-slider {
+  display: none;
+}
+
+/* fix icon centering */
+.mejs__pause.mejs__button>button {
+  transform: translateX(-1px);
+}
+
+.device-mockup.iphone11.portrait.white>.device, .device-mockup.iphone11.white>.device {
+  background-image: url(../device-mockups/iphone11/iphone11.webp);
+}
+
+.device-mockup.iphone11 {
+  padding-bottom: 199.3394%;
+}
+
+.device-mockup.iphone11.portrait>.device>.screen, .device-mockup.iphone11>.device>.screen {
+  top: 2.44864%;
+  bottom: 4.5%;
+  left: 5%;
+  right: 5%;
+  /* opacity: 0.5; */
+  border-radius: 25px;
+}
+
+section.cta{
+  background-image: url(../img/bg2.jpg)!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MEJS__PLAYER START */
+.player-wrapper {
+  border-radius: 5px;
+  box-shadow: 0 0 8px -1px rgba(0, 0, 0, 0.25);
+  background-image: -webkit-linear-gradient(315deg, #FF5572, #FF7555);
+  background-image: linear-gradient(135deg, #FF5572, #FF7555);
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+  border-radius: 0;
+}
+
+ul.playlist {
+  margin: 0;
+  padding: 15px 15px 0 15px;
+}
+
+ul.playlist a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul.playlist li {
+  overflow: hidden;
+  line-height: 20px;
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(230, 211, 211, 0.31);
+}
+
+ul.playlist li::before {
+  content: "\f001";
+  margin-right: 10px;
+  font-size: 120%;
+  background-color: #02020266;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: white;
+  padding: 6px 8px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.track-info {
+  display: inline-block;
+  position: relative;
+  line-height: 1.3em;
+  width: 100%;
+  font-weight: 500;
+}
+
+.track-info .artist {
+  display: block;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.track-info .title {
+  display: block;
+  color: #fff;
+}
+
+ul.playlist .download {
+  float: right;
+}
+
+.mejs__controls {
+  height: 60px;
+}
+
+.mejs__button.mejs__playpause-button.mejs__replay,
+.mejs__button.mejs__playpause-button.mejs__pause {
+  background: #FFB00E;
+  width: 40px;
+  padding: 0 5px;
+  border-radius: 50%;
+}
+
+.mejs__button.mejs__playpause-button.mejs__replay {
+  background: #29cf54;
+}
+
+.mejs__button.mejs__playpause-button.mejs__play {
+  background: #29cf54;
+  width: 40px;
+  padding: 0 5px;
+  border-radius: 50%;
+}
+
+.mejs__time {
+  box-sizing: content-box;
+  color: #444;
+  font-size: 15px;
+  font-weight: bold;
+  height: 24px;
+  overflow: hidden;
+  width: 50px;
+  padding: 16px 0;
+}
+
+.mejs__button>button {
+  display: block;
+  padding: 0;
+  border: 0;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 20px;
+  color: #444;
+  background: transparent !important;
+}
+
+.mejs__button.mejs__playpause-button.mejs__play button:before {
+  content: "\f04b";
+  color: #fff;
+}
+
+.mejs__button.mejs__playpause-button.mejs__pause button:before {
+  content: "\f04c";
+  color: #fff;
+}
+
+.mejs__button.mejs__playpause-button.mejs__replay button:before {
+  content: "\f01e";
+  color: #fff;
+}
+
+.mejs__button.mejs__volume-button.mejs__mute button:before {
+  content: "\f028";
+}
+
+.mejs__button.mejs__volume-button.mejs__unmute button:before {
+  content: "\f026";
+}
+
+.mejs__container {
+  font-family: Segui Ui, Arial, serif;
+  background-size: cover;
+  position: relative;
+  background: #fff;
+  text-align: left;
+  text-indent: 0;
+  vertical-align: top;
+  height: 80px !important;
+  width: 100% !important;
+}
+
+.mejs__controls:not([style*="display: none"]) {
+  background: none;
+}
+
+.mejs__time-total {
+  background: rgb(212, 245, 221);
+  margin: 5px 0 0;
+  width: 100%;
+}
+
+span.mejs__time-current {
+  background: #dedede;
+}
+
+span.mejs__time-loaded {
+  background: #29cf54;
+}
+
+.mejs__time-handle-content {
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  border-radius: 0;
+  height: 10px;
+  left: -5px;
+  top: -4px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  width: 1px;
+}
+
+.mejs__horizontal-volume-total {
+  background: rgb(41, 207, 84);
+  height: 10px;
+  top: 14px;
+  border-radius: 0;
+}
+
+/* MEJS__PLAYER END */

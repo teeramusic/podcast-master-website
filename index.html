@@ -11,22 +11,26 @@
   <title>New Age - Start Bootstrap Theme</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+  <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+  <!-- <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css"> -->
+  <!-- <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
   <!-- Plugin CSS -->
   <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+  <!-- <link rel='stylesheet prefetch' href='https://mymediaelements.github.io/mejs-player/build/mediaelementplayer.css'> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.12/mediaelementplayer.min.css" integrity="sha256-ji1bfJaTGnyscoc7LzcV9yNJy5vGKJ0frO3KJo1oaGQ=" crossorigin="anonymous" />
 
   <!-- Custom styles for this template -->
   <link href="css/new-age.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" integrity="sha256-e47xOkXs1JXFbjjpoRr1/LhVcqSzRmGmPqsrUQeVs+g=" crossorigin="anonymous" />
+
 </head>
 
 <body id="page-top">
@@ -42,7 +46,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#quote">Get a Quote</a>
+            <a class="nav-link js-scroll-trigger" href="#cart-carousel">Get a Quote</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#why">Why Us?</a>
@@ -61,7 +65,7 @@
         <div class="col-lg-6 my-auto">
           <div class="header-content mx-auto">
             <h1 class="mb-5">Get your podcast edited and professionally mastered within 48hrs by expert engineers. </h1>
-            <a href="#quote" class="btn btn-outline btn-xl js-scroll-trigger">Prices starting at $49!</a>
+            <a href="#cart-carousel" class="btn btn-outline btn-xl js-scroll-trigger">Prices starting at $49!</a>
           </div>
         </div>
         <div class="col-lg-6 my-auto" style="">
@@ -73,376 +77,376 @@
     </div>
   </header>
 
-  <!-- start quote -->
-  <div class="custom-cart">
-
-
-    <div class="custom-cart-inner">
-
-
-      <section class="quote bg-primary show" id="quote">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 mx-auto">
-              <h2 class="section-heading mb-4">Get an instant quote!</h2>
-            </div>
-          </div>
-          <form id="quote-form">
-            <div class="form-group row">
-              <label for="form-name" class="col-md-2">Name</label>
-              <div class="col-md-10">
-                <input type="text" class="form-control" id="form-name" placeholder="Jane Doe">
+  <div id="cart-carousel" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <!-- start quote -->
+        <section class="quote bg-primary" id="quote">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 mx-auto">
+                <h2 class="section-heading mb-4">Get an instant quote!</h2>
               </div>
             </div>
-            <div class="form-group row">
-              <label for="form-email" class="col-md-2">Email address</label>
-              <div class="col-md-10">
-                <input type="email" class="form-control" id="form-email" placeholder="name@example.com">
-              </div>
-            </div>
-            <fieldset class="form-group">
-              <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">I need</legend>
-                <div class="col-sm-10">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="edit-master" id="form-edit-master" value="edit and master">
-                    <label class="form-check-label" for="form-edit-master">
-                      Editing and mastering
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="edit-master" id="form-edit-only" value="edit only" checked>
-                    <label class="form-check-label" for="form-edit-only">
-                      Only editing
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="edit-master" id="form-master-only" value="master only">
-                    <label class="form-check-label" for="form-master-only">
-                      Only mastering
-                    </label>
-                  </div>
-                  <!-- <div class="form-check">
-                <input class="form-check-input" type="radio" name="edit-master" id="form-top-tail" value="master only">
-                <label class="form-check-label" for="form-master-only">
-                  Only mastering + add intro / outro
-                </label>
-              </div> -->
+            <form id="quote-form">
+              <div class="form-group row">
+                <label for="form-name" class="col-md-2">Name</label>
+                <div class="col-md-10">
+                  <input type="text" class="form-control" id="form-name" placeholder="Jane Doe">
                 </div>
               </div>
-            </fieldset>
-            <div class="form-group">
-              <label for="form-raw-length">Total length of your raw audio in minutes:</label>
-              <select class="form-control" id="form-raw-length">
-                <option>I'm not sure</option>
-                <option selected>10</option>
-                <option>20</option>
-                <option>30</option>
-                <option>40</option>
-                <option>50</option>
-                <option>60</option>
-                <option>70</option>
-                <option>80</option>
-                <option>90</option>
-                <option>100</option>
-                <option>110</option>
-                <option>120</option>
-                <option>130</option>
-                <option>140</option>
-                <option>150</option>
-                <option>160</option>
-                <option>170</option>
-                <option>180</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="form-track-count">Total number of tracks of dialogue:</label>
-              <select class="form-control" id="form-track-count">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-              </select>
-            </div>
-            <fieldset class="form-group">
-              <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">Background Music</legend>
-                <div class="col-sm-10">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="bgmusic" id="option-no-music" value="no bgmusic" checked>
-                    <label class="form-check-label" for="option-no-music">
-                      My podcast has no background music
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="bgmusic" id="option-music-provided" value="bg music provided">
-                    <label class="form-check-label" for="option-music-provided">
-                      I will provide the background music that I want for my podcast
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="bgmusic" id="option-need-music" value="need bg music">
-                    <label class="form-check-label" for="option-need-music">
-                      I need appropriate background music added to my podcast
-                    </label>
-                  </div>
+              <div class="form-group row">
+                <label for="form-email" class="col-md-2">Email address</label>
+                <div class="col-md-10">
+                  <input type="email" class="form-control" id="form-email" placeholder="name@example.com">
                 </div>
               </div>
-            </fieldset>
-            <div class="form-group" id="bg-music-collapse">
-              <label for="form-bg-music-count">Number of background music you need / have:</label>
-              <select class="form-control" id="form-bg-music-count">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-              </select>
-            </div>
-            <fieldset class="form-group">
-              <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">Sound effects</legend>
-                <div class="col-sm-10">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sfx" id="option-no-sfx" value="no sfx" checked>
-                    <label class="form-check-label" for="option-no-sfx">
-                      My podcast has no sound effects
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sfx" id="option-sfx-provided" value="sfx provided">
-                    <label class="form-check-label" for="option-sfx-provided">
-                      I will provide the sound effects that I want for my podcast
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sfx" id="option-need-sfx" value="need sfx">
-                    <label class="form-check-label" for="option-need-sfx">
-                      I need appropriate sound effects added to my podcast
-                    </label>
+              <fieldset class="form-group">
+                <div class="row">
+                  <legend class="col-form-label col-sm-2 pt-0">I need</legend>
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="edit-master" id="form-edit-master" value="edit and master">
+                      <label class="form-check-label" for="form-edit-master">
+                        Editing and mastering
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="edit-master" id="form-edit-only" value="edit only" checked>
+                      <label class="form-check-label" for="form-edit-only">
+                        Only editing
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="edit-master" id="form-master-only" value="master only">
+                      <label class="form-check-label" for="form-master-only">
+                        Only mastering
+                      </label>
+                    </div>
+                    <!-- <div class="form-check">
+          <input class="form-check-input" type="radio" name="edit-master" id="form-top-tail" value="master only">
+          <label class="form-check-label" for="form-master-only">
+            Only mastering + add intro / outro
+          </label>
+        </div> -->
                   </div>
                 </div>
+              </fieldset>
+              <div class="form-group">
+                <label for="form-raw-length">Total length of your raw audio in minutes:</label>
+                <select class="form-control" id="form-raw-length">
+                  <option>I'm not sure</option>
+                  <option selected>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+                  <option>110</option>
+                  <option>120</option>
+                  <option>130</option>
+                  <option>140</option>
+                  <option>150</option>
+                  <option>160</option>
+                  <option>170</option>
+                  <option>180</option>
+                </select>
               </div>
-            </fieldset>
-            <div class="form-group collapse" id="sfx-collapse">
-              <label for="form-bg-music-count">Number of sfx music you need / have:</label>
-              <select class="form-control" id="form-sfx-count">
-                <option value="10">less than 10</option>
-                <option value="20">11 - 20</option>
-                <option value="30">21 - 30</option>
-                <option value="40">31 - 40</option>
-                <option value="50">41 - 50</option>
-                <option value="60">51 - 60</option>
-                <option value="70">61 - 70</option>
-                <option value="80">71 - 80</option>
-                <option value="90">81 - 90</option>
-                <option value="100">91 - 100</option>
-                <option value="200">101 - 200</option>
-                <option value="300">201 - 300</option>
-                <option value="400">301 - 400</option>
-                <option value="500">401 - 500</option>
-                <option value="600">501 - 600</option>
-              </select>
-            </div>
-            <!-- <fieldset class="form-group">
-          <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">Intro / Outro</legend>
-            <div class="col-sm-10">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="intro" id="option-no-intro" value="no intro" checked>
-                <label class="form-check-label" for="form-edit-master">
-                  My podcast has no intro / outro
-                </label>
+              <div class="form-group">
+                <label for="form-track-count">Total number of tracks of dialogue:</label>
+                <select class="form-control" id="form-track-count">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="intro" id="option-intro-provided" value="intro provided">
-                <label class="form-check-label" for="form-edit-only">
-                  I will provide the intro / outro for my podcast
-                </label>
+              <fieldset class="form-group">
+                <div class="row">
+                  <legend class="col-form-label col-sm-2 pt-0">Background Music</legend>
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="bgmusic" id="option-no-music" value="no bgmusic" checked>
+                      <label class="form-check-label" for="option-no-music">
+                        My podcast has no background music
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="bgmusic" id="option-music-provided" value="bg music provided">
+                      <label class="form-check-label" for="option-music-provided">
+                        I will provide the background music that I want for my podcast
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="bgmusic" id="option-need-music" value="need bg music">
+                      <label class="form-check-label" for="option-need-music">
+                        I need appropriate background music added to my podcast
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="form-group" id="bg-music-collapse">
+                <label for="form-bg-music-count">Number of background music you need / have:</label>
+                <select class="form-control" id="form-bg-music-count">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="intro" id="option-need-intro" value="need intro">
-                <label class="form-check-label" for="form-master-only">
-                  I want an intro / outro made for my podcast
-                </label>
+              <fieldset class="form-group">
+                <div class="row">
+                  <legend class="col-form-label col-sm-2 pt-0">Sound effects</legend>
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="sfx" id="option-no-sfx" value="no sfx" checked>
+                      <label class="form-check-label" for="option-no-sfx">
+                        My podcast has no sound effects
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="sfx" id="option-sfx-provided" value="sfx provided">
+                      <label class="form-check-label" for="option-sfx-provided">
+                        I will provide the sound effects that I want for my podcast
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="sfx" id="option-need-sfx" value="need sfx">
+                      <label class="form-check-label" for="option-need-sfx">
+                        I need appropriate sound effects added to my podcast
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="form-group collapse" id="sfx-collapse">
+                <label for="form-bg-music-count">Number of sfx music you need / have:</label>
+                <select class="form-control" id="form-sfx-count">
+                  <option value="10">less than 10</option>
+                  <option value="20">11 - 20</option>
+                  <option value="30">21 - 30</option>
+                  <option value="40">31 - 40</option>
+                  <option value="50">41 - 50</option>
+                  <option value="60">51 - 60</option>
+                  <option value="70">61 - 70</option>
+                  <option value="80">71 - 80</option>
+                  <option value="90">81 - 90</option>
+                  <option value="100">91 - 100</option>
+                  <option value="200">101 - 200</option>
+                  <option value="300">201 - 300</option>
+                  <option value="400">301 - 400</option>
+                  <option value="500">401 - 500</option>
+                  <option value="600">501 - 600</option>
+                </select>
               </div>
-            </div>
-          </div>
-        </fieldset> -->
-            <!-- <fieldset class="form-group">
-          <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">AD breaks</legend>
-            <div class="col-sm-10">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="adbreak" id="option-no-adbreak" value="no adbreak" checked>
-                <label class="form-check-label" for="form-edit-master">
-                  I don't have ad breaks
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="adbreak" id="option-adbreak" value="adbreak">
-                <label class="form-check-label" for="form-edit-only">
-                  I have ad breaks
-                </label>
-              </div>
-            </div>
-          </div>
-        </fieldset> -->
-            <h2 class="strong collapse show" id="has-quote">YOUR QUOTE IS: <span class="price-total">49.00USD</span></h2>
-            <h2 class="collapse" id="custom-quote">Please submit your files so we can get back to you.</h2>
-            <a href="#quote" role="button" class="btn btn-primary mb-2" data-toggle="collapse">MAKE AN ORDER</a>
-          </form>
+              <!-- <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Intro / Outro</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="intro" id="option-no-intro" value="no intro" checked>
+          <label class="form-check-label" for="form-edit-master">
+            My podcast has no intro / outro
+          </label>
         </div>
-      </section>
-      <!-- end quote -->
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="intro" id="option-intro-provided" value="intro provided">
+          <label class="form-check-label" for="form-edit-only">
+            I will provide the intro / outro for my podcast
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="intro" id="option-need-intro" value="need intro">
+          <label class="form-check-label" for="form-master-only">
+            I want an intro / outro made for my podcast
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset> -->
+              <!-- <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">AD breaks</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="adbreak" id="option-no-adbreak" value="no adbreak" checked>
+          <label class="form-check-label" for="form-edit-master">
+            I don't have ad breaks
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="adbreak" id="option-adbreak" value="adbreak">
+          <label class="form-check-label" for="form-edit-only">
+            I have ad breaks
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset> -->
+              <h2 class="strong collapse show" id="has-quote">YOUR QUOTE IS: <span class="price-total">49.00USD</span></h2>
+              <h2 class="collapse" id="custom-quote">Please submit your files so we can get back to you.</h2>
+              <a href="#cart-carousel" role="button" class="carousel-nav btn btn-primary mb-2" data-slide="next">MAKE AN ORDER</a>
+            </form>
+          </div>
+        </section>
+        <!-- end quote -->
+      </div>
+      <div class="carousel-item">
+        <!-- start order -->
+        <section class="order bg-primary" id="order">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="section-heading">
+                  <h2>Your current order:</h2>
 
-      <!-- FORM PAGE 2 START -->
-      <section class="order bg-primary" id="order">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="section-heading">
-                <h2>Your current order:</h2>
-
+                </div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-md-4">
+                <h3 class=""><strong>Editing</strong></h3>
+                <span class="d-none" id="no-edit">
+                  NO EDITING SELECTED
+                </span>
+                <ul id="has-edit">
+                  <li>
+                    Editing for <span class="content-length"></span> minutes of content
+                  </li>
+                  <li>
+                    Editing for <span class="track-count"></span> tracks
+                  </li>
+                  <li>
+                    Remove dead air
+                  </li>
+                  <li>
+                    Remove mistakes
+                  </li>
+                  <li>
+                    Remove repeats
+                  </li>
+                  <li>
+                    Remove umms ahhs
+                  </li>
+                  <li>
+                    Remove hesitation
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h3 class=""><strong>Mastering</strong></h3>
+                <span id="has-mastering" class="d-none">NO MASTERING SELECTED</span>
+                <ul>
+                  <li>
+                    Mastering for <span class="content-length"></span> minutes of content
+                  </li>
+                  <li>
+                    Mastering for <span class="track-count"></span> tracks
+                  </li>
+                  <li>
+                    Loudness leveling
+                  </li>
+                  <li>
+                    Noise attenuation
+                  </li>
+                  <li>
+                    Echo / reverb attenuation
+                  </li>
+                  <li>
+                    Plosive attenuation
+                  </li>
+                  <li>
+                    Remove harsh siblances
+                  </li>
+                  <li>
+                    EQ
+                  </li>
+                  <li>
+                    Compression
+                  </li>
+                  <li>
+                    Loudness Normalization: -16 LUFS
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h3 class=""><strong>Extras</strong></h3>
+                <span id="has-extras" class="d-none">NO EXTRAS SELECTED</span>
+                <ul>
+                  <li id="has-bg-music">
+                    Mix in <span id="bg-music-count"></span> background music tracks
+                  </li>
+                  <li id="has-ad">
+                    Add <span id="ads"></span> AD breaks
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <form action="/file-upload" class="dropzone mb-4">
+              <div class="fallback">
+                <input name="file" type="file" multiple />
+              </div>
+            </form>
+            <div class="row mb-4">
+              <div class="col">
+                <!-- <h3>
+                  What's included:
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <h3>
+                  What's not included:
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p> -->
+                <small>
+                  <strong>Terms of Service:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                  ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                  id
+                  est
+                  laborum.
+                </small>
+              </div>
+            </div>
+            <p>
+              Cost total: <span class="price-total">49.00</span>USD
+            </p>
+            <button type="submit" class="btn btn-primary mb-2">ORDER</button>
+            <a href="#cart-carousel" role="button" class="carousel-nav btn btn-secondary mb-2" data-slide="prev">MODIFY MY ORDER</a>
           </div>
-          <div class="row">
-            <div class="col-md-4">
-              <h3 class="strong">Editing</h3>
-              <span class="d-none" id="no-edit">
-                NO EDITING SELECTED
-              </span>
-              <ul id="has-edit">
-                <li>
-                  Editing for <span id="content-length"></span> minutes of content
-                </li>
-                <li>
-                  Editing for <span id="track-count"></span> tracks
-                </li>
-                <li>
-                  Remove dead air
-                </li>
-                <li>
-                  Remove mistakes
-                </li>
-                <li>
-                  Remove repeats
-                </li>
-                <li>
-                  Remove umms ahhs
-                </li>
-                <li>
-                  Remove hesitation
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <h3 class="strong">Mastering</h3>
-              <span id="has-mastering" class="d-none">NO MASTERING SELECTED</span>
-              <ul>
-                <li>
-                  Mastering for <span id="content-length"></span> minutes of content
-                </li>
-                <li>
-                  Mastering for <span id="track-count"></span> tracks
-                </li>
-                <li>
-                  Loudness leveling
-                </li>
-                <li>
-                  Noise attenuation
-                </li>
-                <li>
-                  Echo / reverb attenuation
-                </li>
-                <li>
-                  Plosive attenuation
-                </li>
-                <li>
-                  Remove harsh siblances
-                </li>
-                <li>
-                  EQ
-                </li>
-                <li>
-                  Compression
-                </li>
-                <li>
-                  Loudness Normalization: -16 LUFS
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <h3 class="strong">Extras</h3>
-              <span id="has-extras" class="d-none">NO EXTRAS SELECTED</span>
-              <ul>
-                <li id="has-bg-music">
-                  Mix in <span id="bg-music-count"></span> background music tracks
-                </li>
-                <li id="has-ad">
-                  Add <span id="ads"></span> AD breaks
-                </li>
-              </ul>
-            </div>
-          </div>
-          <form action="/file-upload" class="dropzone mb-4">
-            <div class="fallback">
-              <input name="file" type="file" multiple />
-            </div>
-          </form>
-          <div class="row mb-4">
-            <div class="col">
-              <h3>
-                What's included:
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <h3>
-                What's not included:
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <small>
-                <strong>Terms of Service:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                est
-                laborum.
-              </small>
-            </div>
-          </div>
-          <p>
-            Cost total: <span class="price-total">49.00</span>USD
-          </p>
-          <button type="submit" class="btn btn-primary mb-2">ORDER</button>
-          <a href="#order" role="button" class="btn btn-secondary mb-2" data-toggle="collapse">MODIFY MY ORDER</a>
-        </div>
-      </section>
+        </section>
+        <!-- end ordeer -->
+      </div>
     </div>
   </div>
-  <!-- FORM PAGE 2 END -->
 
 
 
-  <section class="features" id="features">
+  <section class="features" id="why">
     <div class="container">
       <div class="section-heading text-center">
         <h2>Satisfaction Guarenteed</h2>
@@ -452,50 +456,92 @@
       <div class="row">
         <div class="col-lg-4 my-auto">
           <div class="device-container">
-            <div class="device-mockup iphone6_plus portrait white">
+            <!-- <div class="device-mockup iphone6_plus portrait white"> -->
+            <div class="device-mockup iphone11 portrait white">
               <div class="device">
                 <div class="screen">
                   <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                  <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
+                  <!-- audio player start -->
+                  <div class="player-wrapper">
+
+                    <ul class="playlist custom-counter" id="list">
+
+                      <h3 class="text-white"><strong>Sample Podcasts</strong></h3>
+
+                      <li>
+                        <div class="track-info">
+                          <a href="#" data-value="https://mymediaelements.github.io/mejs-player/audio/Rain.mp3">
+                            Rain
+                          </a>
+                          <span class="artist">Akcent</span>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="track-info">
+                          <a href="#" data-value="https://mymediaelements.github.io/mejs-player/audio/Incomplete.mp3">
+                            Incomplete
+                          </a>
+                          <span class="artist">Backstreet boys </span>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="track-info">
+                          <a href="#" data-value="https://mymediaelements.github.io//mejs-player/audio/Despacito.mp3">
+                            Daspacito
+                          </a>
+                          <span class="artist"> Luis Fonsi - Daddy Yankee</span>
+                        </div>
+                      </li>
+
+                    </ul>
+                    <audio id="audio" class="mejs__player" controls="controls">
+                      Your browser does not support the audio format.
+                    </audio>
+                  </div>
+                  <!-- audio player end -->
                 </div>
-                <div class="button">
-                  <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                </div>
+                <!-- <div class="button"> -->
+                <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                <!-- </div> -->
               </div>
             </div>
           </div>
+
+
         </div>
         <div class="col-lg-8 my-auto">
           <div class="container-fluid">
             <div class="row">
               <div class="col-lg-6">
                 <div class="feature-item">
-                  <i class="icon-screen-smartphone text-primary"></i>
-                  <h3>Device Mockups</h3>
-                  <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+                  <i class="fas fa-wave-square text-primary"></i>
+                  <h3>Sound Better</h3>
+                  <p class="text-muted">We're experts in our field. Your podcast is guarenteed to sound professional and consistant, everytime.</p>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="feature-item">
-                  <i class="icon-camera text-primary"></i>
-                  <h3>Flexible Use</h3>
-                  <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
+                  <i class="fas fa-running text-primary"></i>
+                  <h3>Work Faster</h3>
+                  <p class="text-muted">We'll handle all of the tedious editing and mastering for you so that you can stay focused on producing great content</p>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-lg-6">
                 <div class="feature-item">
-                  <i class="icon-present text-primary"></i>
-                  <h3>Free to Use</h3>
-                  <p class="text-muted">As always, this theme is free to download and use for any purpose!</p>
+                  <i class="fas fa-wallet text-primary"></i>
+                  <h3>Competitive Rates</h3>
+                  <p class="text-muted">We provide a high quality work and a fast service at the most competitive rate in the market.</p>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="feature-item">
-                  <i class="icon-lock-open text-primary"></i>
-                  <h3>Open Source</h3>
-                  <p class="text-muted">Since this theme is MIT licensed, you can use it commercially!</p>
+                  <i class="fas fa-crown text-primary"></i>
+                  <h3>Satisfaction Guarentee</h3>
+                  <p class="text-muted">If you're not happy with our work, we will revise it until you're completely satisfied or we will give you a full refund.</p>
                 </div>
               </div>
             </div>
@@ -505,16 +551,16 @@
     </div>
   </section>
 
-  <section class="cta">
+  <section class="cta" id="contact">
     <div class="cta-content">
       <div class="container">
-        <h2 class="m-0 p-0">Have more questions?</h2>
-        <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">Get in touch</a>
+        <h2 class="m-0 p-0 ">Have more questions?</h2>
+        <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger mt-4">Get in touch</a>
       </div>
     </div>
     <div class="overlay"></div>
   </section>
-
+  <!--
   <section class="contact bg-primary" id="contact">
     <div class="container">
       <h2>We
@@ -538,8 +584,7 @@
         </li>
       </ul>
     </div>
-  </section>
-
+  </section> -->
   <footer>
     <div class="container">
       <p>&copy; Podcast Editing and Mastering 2019. All Rights Reserved.</p>
@@ -559,14 +604,17 @@
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/new-age.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js" integrity="sha256-cs4thShDfjkqFGk5s2Lxj35sgSRr4MRcyccmi0WKqCM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.12/mediaelement-and-player.min.js" integrity="sha256-z7JbZVaNbNzLvOCFHUNrjqnZRojZbRAxgr4KU2qL0qc=" crossorigin="anonymous"></script>
   <script src="js/custom.js"></script>
 
 </body>
