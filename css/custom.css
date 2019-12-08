@@ -1,0 +1,11 @@
+.dropzone{
+  border: none;
+  border-radius: 0.5em;
+}
+
+.transition{
+  transition: all ease 1s;
+}
+option{
+  column-count: 2;
+}

@@ -42,7 +42,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#plans">Plans</a>
+            <a class="nav-link js-scroll-trigger" href="#quote">Plans</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#why">Why Us?</a>
@@ -61,7 +61,7 @@
         <div class="col-lg-6 my-auto">
           <div class="header-content mx-auto">
             <h1 class="mb-5">Get your podcast edited and professionally mastered within 48hrs by expert engineers. </h1>
-            <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Prices starting at $49!</a>
+            <a href="#quote" class="btn btn-outline btn-xl js-scroll-trigger">Prices starting at $49!</a>
           </div>
         </div>
         <div class="col-lg-6 my-auto" style="">
@@ -73,14 +73,14 @@
     </div>
   </header>
 
-  <section class="plans bg-primary" id="plans">
+  <section class="plans bg-primary" id="quote">
     <div class="container">
       <div class="row">
         <div class="col-md-12 mx-auto">
-          <h2 class="section-heading mb-4">Get a quote!</h2>
+          <h2 class="section-heading mb-4">Get an instant quote!</h2>
         </div>
       </div>
-      <form>
+      <form id="quote-form">
         <div class="form-group row">
           <label for="form-name" class="col-md-2">Name</label>
           <div class="col-md-10">
@@ -98,13 +98,13 @@
             <legend class="col-form-label col-sm-2 pt-0">I need</legend>
             <div class="col-sm-10">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="edit-master" id="form-edit-master" value="edit and master" checked>
+                <input class="form-check-input" type="radio" name="edit-master" id="form-edit-master" value="edit and master">
                 <label class="form-check-label" for="form-edit-master">
                   Editing and mastering
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="edit-master" id="form-edit-only" value="edit only">
+                <input class="form-check-input" type="radio" name="edit-master" id="form-edit-only" value="edit only" checked>
                 <label class="form-check-label" for="form-edit-only">
                   Only editing
                 </label>
@@ -122,7 +122,7 @@
           <label for="form-raw-length">Total length of your raw audio in minutes:</label>
           <select class="form-control" id="form-raw-length">
             <option>I'm not sure</option>
-            <option>10</option>
+            <option selected>10</option>
             <option>20</option>
             <option>30</option>
             <option>40</option>
@@ -162,19 +162,19 @@
             <legend class="col-form-label col-sm-2 pt-0">Background Music</legend>
             <div class="col-sm-10">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="bgmusic" id="form-no-music" value="no bgmusic" checked>
+                <input class="form-check-input" type="radio" name="bgmusic" id="option-no-music" value="no bgmusic" checked>
                 <label class="form-check-label" for="form-edit-master">
                   My podcast has no background music
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="bgmusic" id="form-music-provided" value="bg music provided">
+                <input class="form-check-input" type="radio" name="bgmusic" id="option-music-provided" value="bg music provided">
                 <label class="form-check-label" for="form-edit-only">
                   I will provide the background music that I want for my podcast
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="bgmusic" id="form-need-music" value="need bg music">
+                <input class="form-check-input" type="radio" name="bgmusic" id="option-need-music" value="need bg music">
                 <label class="form-check-label" for="form-master-only">
                   I need appropriate background music added to my podcast
                 </label>
@@ -182,9 +182,9 @@
             </div>
           </div>
         </fieldset>
-        <div class="form-group">
+        <div class="form-group collapse" id="bg-music-collapse">
           <label for="form-bg-music-count">Number of background music you need / have:</label>
-          <select class="form-control" id="form-bg-music-count" disabled>
+          <select class="form-control" id="form-bg-music-count">
             <option>None</option>
             <option>1</option>
             <option>2</option>
@@ -203,19 +203,19 @@
             <legend class="col-form-label col-sm-2 pt-0">Sound effects</legend>
             <div class="col-sm-10">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="sfx" id="form-no-sfx" value="no sfx" checked>
+                <input class="form-check-input" type="radio" name="sfx" id="option-no-sfx" value="no sfx" checked>
                 <label class="form-check-label" for="form-edit-master">
                   My podcast has no sound effects
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="sfx" id="form-sfx-provided" value="sfx provided">
+                <input class="form-check-input" type="radio" name="sfx" id="option-sfx-provided" value="sfx provided">
                 <label class="form-check-label" for="form-edit-only">
                   I will provide the sound effects that I want for my podcast
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="sfx" id="form-need-sfx" value="need sfx">
+                <input class="form-check-input" type="radio" name="sfx" id="option-need-sfx" value="need sfx">
                 <label class="form-check-label" for="form-master-only">
                   I need appropriate sound effects added to my podcast
                 </label>
@@ -223,9 +223,9 @@
             </div>
           </div>
         </fieldset>
-        <div class="form-group">
+        <div class="form-group collapse" id="sfx-collapse">
           <label for="form-bg-music-count">Number of sfx music you need / have:</label>
-          <select class="form-control" id="form-bg-music-count" disabled>
+          <select class="form-control" id="form-bg-music-count">
 
             <option>None</option>
             <option>less than 10</option>
@@ -241,8 +241,8 @@
             <option>101+</option>
           </select>
         </div>
-        <h3>Upload files</h3>
-        <button type="submit" class="btn btn-primary mb-2">GET A QUOTE</button>
+        <h2 class="strong" id="has_quote">YOUR QUOTE IS: <span id="total">49</span>.00<small>USD</small></h2>
+        <h2 class="d-none">Please submit your files so we can get back to you</h2>
       </form>
       <br />
       <hr />
@@ -251,11 +251,11 @@
       <div class="">
 
         <div class="section-heading">
-          <h2>Your Quote is: xxx USD</h2>
+
         </div>
         <div class="row">
           <div class="col-md-4">
-            <h3>Editing</h3>
+            <h3 class="strong">Editing</h3>
             <ul>
               <li>
 
@@ -272,16 +272,16 @@
             </ul>
           </div>
           <div class="col-md-4">
-            <h3>Mastering</h3>
+            <h3 class="strong">Mastering</h3>
             <ul>
               <li>
-
+                EQ
               </li>
               <li>
-
+                Compression
               </li>
               <li>
-
+                Loudness Normalization: -16 LUFS
               </li>
               <li>
 
@@ -289,7 +289,7 @@
             </ul>
           </div>
           <div class="col-md-4">
-            <h3>Extras</h3>
+            <h3 class="strong">Extras</h3>
             <ul>
               <li>
 
@@ -406,7 +406,7 @@
   <section class="cta">
     <div class="cta-content">
       <div class="container">
-        <h2 class="m-0 p-0">Still not sure?</h2>
+        <h2 class="m-0 p-0">Have more questions?</h2>
         <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">Get in touch</a>
       </div>
     </div>
@@ -465,6 +465,7 @@
   <!-- Custom scripts for this template -->
   <script src="js/new-age.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js" integrity="sha256-cs4thShDfjkqFGk5s2Lxj35sgSRr4MRcyccmi0WKqCM=" crossorigin="anonymous"></script>
+  <script src="js/custom.js"></script>
 
 </body>
 
