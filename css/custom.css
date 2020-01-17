@@ -66,8 +66,35 @@ section.cta{
 
 
 
-
-
+/* BUTTONS HEIGHT MATCH PAYPAL */
+@media only screen and (min-width: 300px)
+.btn {
+    height: 45px;
+    line-height: 45px;
+    min-height: 30px;
+    max-height: 55px;
+}
+@media only screen and (min-width: 200px)
+.btn {
+    height: 35px;
+    line-height: 35px;
+    min-height: 35px;
+    max-height: 55px;
+}
+@media only screen and (min-width: 150px)
+.btn {
+    height: 25px;
+    line-height: 25px;
+    min-height: 25px;
+    max-height: 55px;
+}
+@media only screen and (min-width: 75px)
+.btn {
+    height: 25px;
+    line-height: 25px;
+    min-height: 25px;
+    max-height: 30px;
+}
 
 
 
